@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- TODO: glöm ej att byta språk här -->
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/ico" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <title>Quiz</title>
   </head>
   <body>
     <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
-      <!-- TODO: skriv din kod här, innan script-taggen -->
+      <section class="page">
+
+        <h1>Quiz</h1>
+        
+        <div id="gameDescription">
+        </div>
+        
+        <div id="playerDetails">
+          <label>
+            <input type="text" id="playerNameInput" placeholder="Skriv in ditt namn">
+          </label>
+        </div>
+      
+        <div id="questionContainer">
+          <div id="questionText"></div>
+          <button id="answer1"></button>
+          <button id="answer2"></button>
+          <button id="answer3"></button>
+        </div>
+
+        <div>
+          <button id="startGameBtn">Starta spelet</button>
+        </div>
+
+        
+        <div id="nextWrapper">
+          <button id="next">Nästa</button>
+        </div>
+        
+      
+        <div id="gameOver" class="hidden">
+          Spelet är slut!
+          <p id="pointsContainer"></p>
+          <button id="restartGameBtn">Spela igen</button>
+          
+        </div>
+      </section>
+      
+      
+
     </main>
 
     <!-- TODO
