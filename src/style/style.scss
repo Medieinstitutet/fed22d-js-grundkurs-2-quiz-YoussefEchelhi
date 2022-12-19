@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+  font-family: Poppins, sans-serif;
+}
+
+body{
+    background-color: #b8c6db;
+    color: white;
+}
+
+.page{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    margin: 50px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1 {
+    color: black;
+}
+
+  #nextWrapper {
+    display: none;
+  }
+
+  #startGameBtn {
+    cursor: pointer;
+    background-color: #03cae4;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    font-family: Poppins, sans-serif;
+    margin-top: 30px;
+  }
+
+  #next {
+    cursor: pointer;
+    background-color: #03cae4;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    font-family: Poppins, sans-serif;
+    margin-top: 30px;
+  }
+
+  #restartGameBtn {
+    cursor: pointer;
+    background-color: #03cae4;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    font-family: Poppins, sans-serif;
+    margin-top: 30px;
+  }
+
+  #restartGameBtn {
+    background-color: #44b927;
+  }
+
+  #startGameBtn:hover {
+    background-color: #44b927;
+  }
+
+  #next:hover {
+    background-color: #44b927;
+  }
+
+  #questionText {
+    color: black;
+  }
+
+  #gameOver {
+    color: black;
+  }
+
+  #gameDescription {
+    color: black;
+  }
+
+  #playerDetails {
+    color: black;
+  }
+  
+  h1{
+    position: relative;
+    text-align: center;
+  }
+  
+  .hidden{
+    display:none;
+  }
+  
+  button a:hover{
+    color: red;
+  }
+
+  #questionContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #questionContainer button {
+    max-width: fit-content;
+  }
