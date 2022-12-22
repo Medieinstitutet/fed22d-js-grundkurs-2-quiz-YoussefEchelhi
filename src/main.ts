@@ -2,11 +2,14 @@ import './style/style.scss';
 import {shuffle} from './utils';
 
 const gameDescText = 'Testa dina matematikkunskaper!';
-const gameDescription = document.querySelector('#gameDescription');
+const gameDescription: HTMLDivElement | null = document.querySelector('.gameDescription');
 
-gameDescription.innerHTML = gameDescText;
+if (gameDescription) {
+  gameDescription.innerHTML = gameDescText;
+}
 
-document.querySelector('#startGameBtn').addEventListener('click', startGame);
+
+document.querySelector('.startGameBtn').addEventListener('click', startGame);
 
 let playerName = '';
 
@@ -36,8 +39,8 @@ function startGame() {
   playerName = document.querySelector('#playerNameInput').value;
  
   gameDescription.style.display = 'none';
-  document.querySelector('#playerDetails').style.display = 'none';
-  document.querySelector('#startGameBtn').style.display = 'none';
+  document.querySelector('.playerDetails').classList.add('hidden');
+  document.querySelector('.startGameBtn').classList.add('hidden');
   document.querySelector('#nextWrapper').style.display = 'block';
   document.querySelector('#questionContainer').style.display = 'flex';
 
@@ -45,10 +48,10 @@ function startGame() {
   nextQuestion();
 };
 
-const questionTextDiv = document.querySelector('#questionText');
-const answer1Btn = document.querySelector('#answer1');
-const answer2Btn = document.querySelector('#answer2');
-const answer3Btn = document.querySelector('#answer3'); 
+const questionTextDiv = document.querySelector('.questionText');
+const answer1Btn = document.querySelector('.answer1');
+const answer2Btn = document.querySelector('.answer2');
+const answer3Btn = document.querySelector('.answer3'); 
 
 answer1Btn.addEventListener('click', checkAnswer);
 answer2Btn.addEventListener('click', checkAnswer);
@@ -58,16 +61,16 @@ let currentQuestion = 0;
 let points = 0;
 
 function checkAnswer(e){ 
-const userAnswer = e.currentTarget.innerHTML;
-const correctAnswer = questions[currentQuestion -1].correctAnswer; 
-if (userAnswer == correctAnswer) {
-points++;
-}else if (points > 0) {
-points--;
-}
+  const userAnswer = e.currentTarget.innerHTML;
+  const correctAnswer = questions[currentQuestion -1].correctAnswer; 
+  if (userAnswer == correctAnswer) {
+    points++;
+  }else if (points > 0) {
+    points--;
+  }
 }
 
-const next = document.querySelector('#next');
+const next = document.querySelector('.next');
 next.addEventListener('click', nextQuestion);
 
 
@@ -85,7 +88,7 @@ answer3Btn.innerHTML = questions[currentQuestion].answerOptions[2];
 currentQuestion++;
 }
 
-document.querySelector ('#restartGameBtn').addEventListener('click', restartGame);
+document.querySelector ('.restartGameBtn').addEventListener('click', restartGame);
 
 function restartGame(){
   document.querySelector('#gameOver').style.display ='none';
@@ -101,6 +104,6 @@ function restartGame(){
 function gameOver() {
   document.querySelector('#gameOver').style.display = 'block';
   document.querySelector('#questionContainer').style.display = 'none'; 
-  document.querySelector('#pointsContainer').innerHTML = `Du ${playerName} fick ${points} poäng`;
+  document.querySelector('.pointsContainer').innerHTML = `Du, ${playerName}, fick ${points} poäng.`;
   document.querySelector('#nextWrapper').style.display = 'none';
 }

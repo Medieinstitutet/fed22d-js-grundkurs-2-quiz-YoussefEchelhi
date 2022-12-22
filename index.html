@@ -10,45 +10,43 @@
   </head>
   <body>
     <main>
+      <header>
+        <h1>Quiz</h1>
+      </header>
       <section class="page">
 
-        <h1 class="rubrik">Quiz</h1>
-        
-        <div id="gameDescription">
+        <div class="gameDescription">
         </div>
         
-        <div id="playerDetails">
+        <div class="playerDetails">
           <label>
             <input type="text" id="playerNameInput" placeholder="Skriv in ditt namn">
           </label>
         </div>
       
         <div id="questionContainer">
-          <div id="questionText"></div>
-          <button id="answer1"></button>
-          <button id="answer2"></button>
-          <button id="answer3"></button>
+          <div class="questionText"></div>
+          <button class="answer1"></button>
+          <button class="answer2"></button>
+          <button class="answer3"></button>
         </div>
 
         <div>
-          <button id="startGameBtn">Starta spelet</button>
+          <button class="startGameBtn">Starta spelet</button>
         </div>
 
         
         <div id="nextWrapper">
-          <button id="next">Nästa</button>
+          <button class="next">Nästa</button>
         </div>
         
       
         <div id="gameOver" class="hidden">
-          Spelet är slut!
-          <p id="pointsContainer"></p>
-          <button id="restartGameBtn">Spela igen</button> 
+          <p class="endText">Spelet är slut!</p>
+          <p class="pointsContainer"></p>
+          <button class="restartGameBtn">Spela igen</button> 
         </div>
       </section>
-      
-      
-
     </main>
 
     <!-- TODO
