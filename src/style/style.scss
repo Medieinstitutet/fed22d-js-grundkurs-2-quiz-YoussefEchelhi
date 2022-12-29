@@ -5,18 +5,21 @@
 }
 
 body{
-  background-color: #b8c6db;
-  color: white;
-  background-image: url(/public/mathematics.jpg);
+  background-image: linear-gradient(to bottom right, #5761B2, #1FC5A8);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  
 }
 
 header {
   text-align: center;
   color: black;
+}
+
+h1 {
+  font-family: "Jua", sans-serif;
+  font-size: 4rem;
+  color: white;
 }
 
 .page{
@@ -33,13 +36,17 @@ header {
   height: 40vh;
 }
 
-h2 {
-  display: none;
-}
+
 
 .playerDetails {
   position: relative;
   top: 6rem;
+}
+
+#playerNameInput {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 #nextWrapper {
@@ -150,11 +157,43 @@ button a:hover{
   max-width: fit-content;
 }
 
+.answer1 {
+  min-width: 5rem;
+  border-radius: 10%;
+}
+
+.answer1.open {
+  background-color: rgb(213, 222, 110);
+}
+
+.answer2 {
+  min-width: 5rem;
+  border-radius: 10%;
+}
+
+.answer2.open {
+  background-color: rgb(213, 222, 110);
+}
+
+.answer3 {
+  min-width: 5rem;
+  border-radius: 10%;
+}
+
+.answer3.open {
+  background-color: rgb(213, 222, 110);
+}
+
+
 @media screen and (min-width: 600px) {
 
   .page {
     width: 500px;
     left: 45%;
+  }
+
+  .playerDetails {
+    top: 3rem;
   }
 }
 
@@ -169,6 +208,10 @@ button a:hover{
 
 #questionContainer {
   top: 1rem;
+}
+
+.playerDetails {
+  top: 2rem;
 }
   
 }
