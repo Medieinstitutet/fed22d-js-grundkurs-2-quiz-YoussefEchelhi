@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- TODO: glöm ej att byta språk här -->
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/js-template/favicon.ico" />
+    <link rel="icon" type="image/ico" href="/fed22d-js-grundkurs-2-quiz-YoussefEchelhi/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt</title>
-    <script type="module" crossorigin src="/js-template/assets/index.288365a0.js"></script>
-    <link rel="stylesheet" href="/js-template/assets/index.09951560.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <title>Quiz</title>
+    <script type="module" crossorigin src="/fed22d-js-grundkurs-2-quiz-YoussefEchelhi/assets/index.38ebab8e.js"></script>
+    <link rel="stylesheet" href="/fed22d-js-grundkurs-2-quiz-YoussefEchelhi/assets/index.661fbad2.css">
   </head>
   <body>
     <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
-      <!-- TODO: skriv din kod här, innan script-taggen -->
+      <header>
+        <h1>Quiz</h1>
+      </header>
+      <section class="page">
+
+        <h2 class="gameDescription">
+        </h2>
+        
+        <div class="playerDetails">
+          <label>
+            <input type="text" id="playerNameInput" placeholder="Skriv in ditt namn">
+          </label>
+        </div>
+      
+        <div id="questionContainer">
+          <div class="questionText"></div>
+          <button class="answer1"></button>
+          <button class="answer2"></button>
+          <button class="answer3"></button>
+        </div>
+
+        <div>
+          <button class="startGameBtn">Starta spelet</button>
+        </div>
+
+        
+        <div id="nextWrapper">
+          <button class="next">Nästa</button>
+        </div>
+        
+      
+        <div id="gameOver" class="hidden">
+          <p class="endText">Spelet är slut!</p>
+          <p class="pointsContainer"></p>
+          <button class="restartGameBtn">Spela igen</button> 
+        </div>
+      </section>
     </main>
 
     <!-- TODO
