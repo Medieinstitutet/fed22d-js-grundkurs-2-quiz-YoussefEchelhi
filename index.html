@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- TODO: glöm ej att byta språk här -->
+<html lang="sv">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projekt</title>
+    <meta charset="UTF-8" >
+    <link rel="icon" type="image/ico" href="/favicon.ico" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" >
+    <title>Quiz</title>
   </head>
   <body>
     <main>
-      <div class="app" id="app"></div> <!-- TODO: går bra att radera -->
-      <!-- TODO: skriv din kod här, innan script-taggen -->
+      <header>
+        <h1>Quiz</h1>
+      </header>
+      <section class="page">
+
+        <h2 class="gameDescription">
+        </h2>
+        
+        <div class="playerDetails">
+          <label>
+            <input type="text" id="playerNameInput" placeholder="Skriv in ditt namn">
+          </label>
+        </div>
+      
+        <div id="questionContainer">
+          <div class="questionText"></div>
+          <button class="answer1"></button>
+          <button class="answer2"></button>
+          <button class="answer3"></button>
+        </div>
+
+        <div>
+          <button class="startGameBtn">Starta spelet</button>
+        </div>
+
+        
+        <div id="nextWrapper">
+          <button class="next">Nästa</button>
+        </div>
+        
+      
+        <div id="gameOver" class="hidden">
+          <p class="endText">Spelet är slut!</p>
+          <p class="pointsContainer"></p>
+          <button class="restartGameBtn">Spela igen</button> 
+        </div>
+      </section>
     </main>
 
     <!-- TODO
@@ -17,6 +55,6 @@
     - Kontrollera tillgänglighet: https://www.a11yproject.com/checklist/ & Chrome Lighthouse/Firefox Accessibility Tools
     - Validera genererade CSS: https://jigsaw.w3.org/css-validator/#validate_by_input
     -->
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
