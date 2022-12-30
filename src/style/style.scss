@@ -17,7 +17,7 @@ header {
 }
 
 h1 {
-  font-family: "Jua", sans-serif;
+  font-family: Jua, sans-serif;
   font-size: 4rem;
   color: white;
 }
@@ -34,13 +34,6 @@ h1 {
   border-radius: 10px;
   overflow: hidden;
   height: 40vh;
-}
-
-
-
-.playerDetails {
-  position: relative;
-  top: 6rem;
 }
 
 #playerNameInput {
@@ -63,8 +56,8 @@ h1 {
   font-family: Poppins, sans-serif;
   margin-top: 30px;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
 }
 
 .next {
@@ -77,8 +70,8 @@ h1 {
   font-family: Poppins, sans-serif;
   margin-top: 30px;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
 }
 
 .restartGameBtn {
@@ -91,8 +84,8 @@ h1 {
   font-family: Poppins, sans-serif;
   margin-top: 30px;
   position: absolute;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
 }
 
 .restartGameBtn:hover {
@@ -120,10 +113,13 @@ h1 {
   color: black;
   position: relative;
   top: 1rem;
+  font-size: 1rem;
 }
 
-#playerDetails {
+.playerDetails {
   color: black;
+  position: relative;
+  top: 6rem;
 }
   
 .hidden{
@@ -149,7 +145,6 @@ button a:hover{
   flex-direction: column;
   align-items: center;
   position: relative;
-  top: 5rem;
   gap: 15px;
 }
 
@@ -159,42 +154,37 @@ button a:hover{
 
 .answer1 {
   min-width: 5rem;
-  border-radius: 10%;
-}
-
-.answer1.open {
-  background-color: rgb(213, 222, 110);
 }
 
 .answer2 {
   min-width: 5rem;
-  border-radius: 10%;
-}
-
-.answer2.open {
-  background-color: rgb(213, 222, 110);
 }
 
 .answer3 {
   min-width: 5rem;
-  border-radius: 10%;
 }
 
-.answer3.open {
-  background-color: rgb(213, 222, 110);
-}
+
 
 
 @media screen and (min-width: 600px) {
 
-  .page {
-    width: 500px;
-    left: 45%;
-  }
+.page {
+  width: 500px;
+  left: 45%;
+  min-height: fit-content;
+}
 
-  .playerDetails {
-    top: 3rem;
-  }
+.playerDetails {
+  color: black;
+  position: relative;
+  top: 2rem;
+}
+
+#questionContainer {
+  top: 0;
+}
+
 }
 
 
@@ -210,8 +200,9 @@ button a:hover{
   top: 1rem;
 }
 
-.playerDetails {
-  top: 2rem;
+.gameDescription {
+  font-size: 1.5rem;
 }
+
   
 }
